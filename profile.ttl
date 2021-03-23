@@ -1,0 +1,57 @@
+@prefix dcterms: <http://purl.org/dc/terms/> .
+@prefix prof: <http://www.w3.org/ns/dx/prof/> .
+@prefix role: <http://www.w3.org/ns/dx/prof/role/> .
+@prefix sdo: <https://schema.org/> .
+@prefix skos: <http://www.w3.org/2004/02/skos/core#> .
+@prefix xsd: <http://www.w3.org/2001/XMLSchema#> .
+
+
+<https://w3id.org/profile/dcat2null>
+    a prof:Profile ;
+    dcterms:created "2021-03-23"^^xsd:date ;
+    dcterms:creator <https://linked.data.gov.au/org/surround> ;
+    dcterms:modified "2021-03-23"^^xsd:date ;
+    dcterms:publisher <https://linked.data.gov.au/org/surround> ;
+    skos:definition "This profile of DCAT2 implements no constraints on that specification and exists only to provice a validator resource for automated data validation. Validation rules have been extracted from the standard itself. See the standard for the specification of DCAT2 rules."@en ;
+    skos:prefLabel "DCAT2 Null Profile" ;
+    prof:hasResource 
+    [
+        skos:prefLabel "Validator in SHACL"@en ;
+        dcterms:conformsTo <https://www.w3.org/TR/shacl/> ;
+        dcterms:format "text/turtle" ;
+        prof:hasArtifact <https://w3id.org/profile/dcat2null/validator> ;
+        prof:hasRole role:validation
+    ] ,
+    [
+        skos:prefLabel "Example of a valid dataset"@en ;
+        dcterms:format "text/turtle" ;
+        prof:hasArtifact <https://w3id.org/profile/dcat2null/examples/valid> ;
+        prof:hasRole role:example
+    ] ,
+    [
+        skos:prefLabel "Example of an invalid dataset"@en ;
+        dcterms:description "This example dataset does not satisfy..."@en ;
+        dcterms:format "text/turtle" ;
+        prof:hasArtifact <https://w3id.org/profile/dcat2null/examples/invalid> ;
+        prof:hasRole role:example
+    ] ,
+    [
+        skos:prefLabel "Example of a second invalid dataset"@en ;
+        dcterms:description "This example dataset does not satisfy..."@en ;
+        dcterms:format "text/turtle" ;
+        prof:hasArtifact <https://w3id.org/profile/dcat2null/examples/invalid-2> ;
+        prof:hasRole role:example
+    ] ,
+    [
+        skos:prefLabel "Profile code repository"@en ;
+        dcterms:description "Code repository storing all Profile artifacts"@en ;
+        prof:hasArtifact <https://github.com/surroundaustralia/dcat2null-profile> ;
+        prof:hasRole role:repository
+    ] ;
+    prof:isProfileOf <https://www.w3.org/TR/vocab-dcat/> ;
+.
+
+<https://linked.data.gov.au/org/surround> a sdo:Organization ;
+    sdo:name "SURROUND Australia Pty Ltd" ;
+    sdo:url "https://surroundaustralia.com"^^xsd:anyURI ;
+.

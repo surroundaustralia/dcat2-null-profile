@@ -1,0 +1,206 @@
+@prefix dcat: <http://www.w3.org/ns/dcat#> .
+@prefix dcterms: <http://purl.org/dc/terms/> .
+@prefix owl: <http://www.w3.org/2002/07/owl#> .
+@prefix prov: <http://www.w3.org/ns/prov#> .
+@prefix rdf: <http://www.w3.org/1999/02/22-rdf-syntax-ns#> .
+@prefix rdfs: <http://www.w3.org/2000/01/rdf-schema#> .
+@prefix sdo: <https://schema.org/> .
+@prefix sh: <http://www.w3.org/ns/shacl#> .
+@prefix skos: <http://www.w3.org/2004/02/skos/core#> .
+@prefix xsd: <http://www.w3.org/2001/XMLSchema#> .
+@base <https://w3id.org/profile/vocpub/shapes/> .
+
+
+#
+#   Catalog
+#
+<Requirement-c>
+    a sh:NodeShape ;
+    sh:targetNode dcat:Catalog ;
+    sh:property [
+        sh:path dcterms:hasPart ;
+        sh:class dcat:Resource ;
+        sh:message "Requirement C: All values for the property `dcterms:hasPart` on instances of `dcat:Catalog` must indicate an object of class dcat:Resource" ;
+    ] ;
+.
+
+#
+#   CatalogRecord
+#
+<Requirement-cr>
+	a sh:NodeShape ;
+	sh:targetClass dcat:CatalogRecord ;
+    sh:message "Requirement CR: There must be one and only one property `foaf:primaryTopic` on instances of `dcat:CatalogRecord` and it must indicate an object of class `dcat:Resource`" ;
+    sh:property [
+        sh:path foaf:primaryTopic ;
+        sh:class dcat:Resource ;
+        sh:minCount 1 ;
+        sh:maxCount 1 ;
+    ]
+.
+
+#
+#   dcat:DataService
+#
+<Requirement-ds>
+	a sh:NodeShape ;
+	sh:targetClass dcat:DataService ;
+    sh:message "Requirement DS: Instances of `dcat:DataService` must have one and only one property `dcat:endpointURL` provided" ;
+    sh:property [
+        sh:path dcat:endpointURL ;
+        sh:minCount 1 ;
+        sh:maxCount 1 ;
+    ]
+.
+
+#
+#   dcat:Dataset
+#
+
+
+#
+#   dcat:Distribution
+#
+
+
+#
+#   dcat:Relationship
+#
+<Requirement-r>
+	a sh:NodeShape ;
+	sh:targetClass dcat:Relationship ;
+    sh:message "Requirement R: Instances of `dcat:Relationship` must have at least one `dct:relation` property provided" ;
+    sh:property [
+        sh:path dcat:endpointURL ;
+        sh:minCount 1 ;
+        sh:maxCount 1 ;
+    ]
+.
+
+#
+#   dcat:Resource
+#
+
+#
+#   dcat:Role
+#
+
+#
+#   dcat:accessService
+#
+
+#
+#   dcat:accessURL
+#
+
+#
+#   dcat:bbox
+#
+
+#
+#   dcat:byteSize
+#
+
+#
+#   dcat:catalog
+#
+
+#
+#   dcat:centroid
+#
+
+#
+#   dcat:compressFormat
+#
+
+#
+#   dcat:contactPoint
+#
+
+#
+#   dcat:dataset
+#
+
+#
+#   dcat:distribution
+#
+
+#
+#   dcat:downloadURL
+#   
+
+#
+#   dcat:endDate
+#
+
+#
+#   dcat:endpointDescription
+#
+
+#
+#   dcat:endpointURL
+#
+
+#
+#   dcat:hadRole
+#
+
+#
+#   dcat:keyword
+#
+
+#
+#   dcat:landingPage
+#
+
+#
+#   dcat:mediaType
+#
+
+#
+#   dcat:packageFormat
+#
+
+#
+#   dcat:qualifiedRelation
+#
+
+#
+#   dcat:record
+#
+
+#
+#   dcat:servesDataset
+#
+
+#
+#   dcat:service
+#
+
+#
+#   dcat:spatialResolutionInMeters
+#
+
+#
+#   dcat:startDate
+#
+
+#
+#   dcat:temporalResolution
+#
+
+#
+#   dcat:theme
+#
+
+#
+#   dcat:themeTaxonomy
+#
+
+#
+#   foaf:homepage
+#
+
+#
+#   foaf:primaryTopic
+#
