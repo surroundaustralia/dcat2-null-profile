@@ -32,6 +32,13 @@
         prof:hasRole role:validation
     ] ,
     [
+        skos:prefLabel "DCAT2 Ontology"@en ;
+        dcterms:description "The unaltered ontology file, re-presented here for use in by validation tooling"@en ;
+        dcterms:format "text/turtle" ;
+        prof:hasArtifact <https://w3id.org/profile/dcat2null/ont> ;
+        prof:hasRole role:schema
+    ] ,    
+    [
         skos:prefLabel "Example of a valid dataset"@en ;
         dcterms:description "Examples taken from the DCAT2 specification document"@en ;
         dcterms:format "text/turtle" ;
@@ -44,13 +51,6 @@
         dcterms:format "text/turtle" ;
         prof:hasArtifact <https://w3id.org/profile/dcat2null/examples/invalid-1> ;
         prof:hasRole role:example
-    ] ,
-    [
-        skos:prefLabel "DCAT2 Ontology"@en ;
-        dcterms:description "The unaltered ontology file, re-presented here for use in by validation tooling"@en ;
-        dcterms:format "text/turtle" ;
-        prof:hasArtifact <https://w3id.org/profile/dcat2null/ont> ;
-        prof:hasRole role:schema
     ] ,
     [
         skos:prefLabel "Validation Commands"@en ;
