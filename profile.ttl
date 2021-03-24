@@ -8,7 +8,6 @@
 
 <https://w3id.org/profile/dcat2null>
     a prof:Profile ;
-    prof:hasToken "dcat2null" ;
     dcterms:created "2021-03-23"^^xsd:date ;
     dcterms:creator <http://orcid.org/0000-0002-8742-7730> ;
     dcterms:modified "2021-03-23"^^xsd:date ;
