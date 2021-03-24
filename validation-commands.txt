@@ -1,0 +1,4 @@
+# validation using pySHACL 
+
+# validate using OWLRL & RDFS inferencing with the DCAT2 ontology and this validator
+~$ pyshacl -e dcat2.ttl -i both -s validator.shacl.ttl examples/invalid-1.ttl

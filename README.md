@@ -19,6 +19,10 @@ This profile's rules, as extracted from the DCAT2 specification (the standard) a
 
 Tools such as [pySHACL](https://github.com/RDFLib/pySHACL) and the online [SHACL Playground](https://shacl.org/playground/) can be used with this Validator to validate vocabulary files.
 
+### Examples
+Some examples of valid and invalid DCAT2 statements are given in the [examples/](examples/) folder.
+
+
 ## License  
 This code is licensed using the [CC BY 4.0](https://creativecommons.org/licenses/by/4.0/) licence. See the [LICENSE file](LICENSE) for the deed. 
 
