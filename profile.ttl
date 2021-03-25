@@ -51,14 +51,7 @@
         dcterms:format "text/turtle" ;
         prof:hasArtifact <https://w3id.org/profile/dcat2null/examples/invalid-1> ;
         prof:hasRole role:example
-    ] ,
-    [
-        skos:prefLabel "Validation Commands"@en ;
-        dcterms:description "A text file containing some example pySHACL use to validate the examples"@en ;
-        dcterms:format "text/turtle" ;
-        prof:hasArtifact <https://w3id.org/profile/dcat2null/validation-commands> ;
-        prof:hasRole role:guidance
-    ] ;  
+    ] ;
     prof:isProfileOf <https://www.w3.org/TR/vocab-dcat/> ;
 .
 
