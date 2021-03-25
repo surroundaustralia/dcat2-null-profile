@@ -1,0 +1,15 @@
+@prefix : <https://example.com/> .
+@prefix dcat: <http://www.w3.org/ns/dcat#> .
+
+
+# invalid use of dcat:theme as its range is a skos:Concept and therefore cannot be a literal
+:dataset-001
+  a dcat:Dataset ;
+  dcat:theme "Should be a skos:Concept" ;
+.
+
+# valid use of dcat:theme since, due to the Open World Assumption, :xxx _could_ be a skos:Concept
+:dataset-002
+  a dcat:Dataset ;
+  dcat:theme :xxx ;
+.

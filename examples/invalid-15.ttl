@@ -1,0 +1,14 @@
+@prefix : <https://example.com/> .
+@prefix dcat: <http://www.w3.org/ns/dcat#> .
+@prefix dcterms: <http://purl.org/dc/terms/> .
+@prefix xsd: <http://www.w3.org/2001/XMLSchema#> .
+
+
+# invalid use of dcat:temporalResolution as its range value must be a datatype of xsd:duration
+:x dcat:temporalResolution <https://something.com> .
+
+# invalid use of dcat:temporalResolution as its range value must be a datatype of xsd:duration
+:y dcat:temporalResolution "12" .
+
+# invalid use of dcat:temporalResolution as its range value must be a datatype of xsd:duration
+:z dcat:temporalResolution "12"^^xsd:gMonth .

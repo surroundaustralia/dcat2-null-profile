@@ -1,0 +1,21 @@
+@prefix : <https://example.com/> .
+@prefix dcat: <http://www.w3.org/ns/dcat#> .
+@prefix skos: <http://www.w3.org/2004/02/skos/core#> .
+
+
+# valid use of dcat:theme as its range could be a skos:Concept
+:dataset-001
+  a dcat:Dataset ;
+  dcat:theme :xx ;
+.
+
+# valid use of dcat:theme as its range is declared a skos:Concept
+:dataset-002
+  a dcat:Dataset ;
+  dcat:theme :yy ;
+.
+
+:zz
+  a skos:Concept ;
+  skos:prefLabel "Concpet YY" ;
+.

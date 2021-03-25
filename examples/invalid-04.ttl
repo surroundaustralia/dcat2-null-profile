@@ -1,0 +1,10 @@
+@prefix : <https://example.com/> .
+@prefix dcat: <http://www.w3.org/ns/dcat#> .
+@prefix dcterms: <http://purl.org/dc/terms/> .
+
+
+# invalid use of dcat:Relationship as it must have at least one dcterms:relation property declared
+:r-001
+  a dcat:Relationship ;
+  dcterms:title "Relationship 1" ;
+.

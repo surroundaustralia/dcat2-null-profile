@@ -1,0 +1,11 @@
+@prefix : <https://example.com/> .
+@prefix dcat: <http://www.w3.org/ns/dcat#> .
+@prefix dcterms: <http://purl.org/dc/terms/> .
+@prefix xsd: <http://www.w3.org/2001/XMLSchema#> .
+
+
+# invalid use of dcat:keyword as its range value must be a literal, not an IRI or a Blank Node
+:x dcat:keyword <https://something.com> .
+
+# invalid use of dcat:keyword as its range value must be a literal, not an IRI or a Blank Node
+:y dcat:keyword [] .

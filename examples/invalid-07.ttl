@@ -1,0 +1,11 @@
+@prefix : <https://example.com/> .
+@prefix dcat: <http://www.w3.org/ns/dcat#> .
+
+
+# invalid use of dcat:centroid as its range value must be a literal, not an IRI or a Blank Node
+:x dcat:centroid <https://something.com> .
+
+# invalid use of dcat:centroid as its range value must be a literal, not an IRI or a Blank Node
+:y dcat:centroid [
+    ex:value 5 ;
+] .

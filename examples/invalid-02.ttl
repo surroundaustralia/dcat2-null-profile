@@ -1,0 +1,16 @@
+@prefix : <https://example.com/> .
+@prefix dcat: <http://www.w3.org/ns/dcat#> .
+@prefix dcterms: <http://purl.org/dc/terms/> .
+
+
+# invalid use of dcterms:hasPart as its range is a dcat:Resource and therefore cannot be a literal
+:cat-001
+  a  dcat:Catalog ;
+  dcterms:hasPart "Should be a dcat:Resource" ;
+.
+
+# valid use of dcterms:hasPart since, due to the Open World Assumption, :xxx _could_ be a dcat:Resource
+:cat-002
+  a  dcat:Catalog ;
+    dcterms:hasPart :xxx ;
+.
