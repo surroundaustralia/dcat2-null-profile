@@ -33,9 +33,9 @@
     ] ,
     [
         skos:prefLabel "DCAT2 Ontology"@en ;
-        dcterms:description "The unaltered ontology file, re-presented here for use in by validation tooling"@en ;
+        dcterms:description "The DCAT2 ontology"@en ;
         dcterms:format "text/turtle" ;
-        prof:hasArtifact <https://w3id.org/profile/dcat2null/ont> ;
+        prof:hasArtifact <https://www.w3.org/ns/dcat.ttl> ;
         prof:hasRole role:schema
     ] ,    
     [
