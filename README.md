@@ -33,7 +33,7 @@ Note [Citation](#citation) below for attribution.
 To cite this profile, please use the following (formulated in [BibTex](http://www.bibtex.org/)):
 
 ```
-@software{dcat2-null-profile,
+@software{dcat2null-profile,
   author = {{SURROUND Australia Pty Ltd}},
   title = {{DCAT2 Null Profile}},
   version = {1.0},
